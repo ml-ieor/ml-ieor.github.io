@@ -16,7 +16,7 @@ We discussed the following two papers: Dantzig Selector with an approximately op
 
 ## Problem
 
-We are given a data matrix $$X \in \R^{n\times m} (m \gg n)$$ and a noisy observation vector $$y \in \R^n$$ satisfying $$y=X\beta^* + \epsilon$ where $\epsilon$$ is the noise vector following the Gaussian distribution $$N(0,\sigma^2 I)$$ and $$\beta^*$$ is the truth model which is a sparse vector. How to recover the sparse vector $\beta^*$ from this under-determined system?
+We are given a data matrix $$X \in \mathbb{R}^{n\times m} (m \gg n)$$ and a noisy observation vector $$y \in \mathbb{R}^n$$ satisfying $$y=X\beta^* + \epsilon$ where $\epsilon$$ is the noise vector following the Gaussian distribution $$N(0,\sigma^2 I)$$ and $$\beta^*$$ is the truth model which is a sparse vector. How to recover the sparse vector $\beta^*$ from this under-determined system?
 
 ## Existing solution
 
@@ -36,7 +36,7 @@ Denote by $$\hat{\beta}_{\text{DS}}$$ the optimal solution to the DS model. Some
 
 * Similar empirical and theoretical performance to LASSO (which is great!).
 * Can be formulated as an LP (which is great!).
-* We wondered about the rationale for including $$X^T$$ term in the constraint. Without the $X^T$, the infinity-norm will only consider the largest error and ignore all other errors (which is bad!). Therefore, having $$X^T$$ seems reaonable. But then, we argued that one can replace the infinity-norm with 1-norm (or 2-norm) and remove $X^T$. Moreover, the 1-norm will keep the optimization problem as an LP (the 2-norm will not). There might be some other rationale for the DS model (_denoising_?).
+* We wondered about the rationale for including $$X^T$$ term in the constraint. Without the $$X^T$$, the infinity-norm will only consider the largest error and ignore all other errors (which is bad!). Therefore, having $$X^T$$ seems reaonable. But then, we argued that one can replace the infinity-norm with 1-norm (or 2-norm) and remove $$X^T$$. Moreover, the 1-norm will keep the optimization problem as an LP (the 2-norm will not). There might be some other rationale for the DS model (_denoising_?).
 
 ## Contribution
 
