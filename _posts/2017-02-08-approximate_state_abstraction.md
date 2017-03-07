@@ -48,7 +48,7 @@ for all $$s\in\mathcal{S}_G$$. The theory behind this result is not particularly
 Practically the $$Q$$ function is unknown apriori and so the above result does not give a useful mechanism for defining $$\phi$$. A more practical corollary is provided in Lemma~2. It states that if $$\phi$$ preserves the rewards and transitions, i.e. 
 
 $$
-\phi(s_1)=\phi(s_2)\Longrightarrow &\forall_a \| \mathcal{R}(s_1,a)-cR(s_2,a) \| \leq \epsilon  \mbox{ and } 
+\phi(s_1)=\phi(s_2)\Longrightarrow &\forall_a | \mathcal{R}(s_1,a)-cR(s_2,a) | \leq \epsilon
 $$
 
 $$
