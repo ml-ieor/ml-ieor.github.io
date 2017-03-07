@@ -56,11 +56,12 @@ $$
 $$
 
 then
+
 $$
 V^{\pi^\ast}(s) - V^{\pi_{GA}}(s)\leq \frac{2\epsilon}{(1-\gamma)^2}\frac{1+\gamma(|\mathcal{S}_G|-1)}{1-\gamma}
 $$
 
-for all $$s\in\mathcal{S}_G$$. Since we typically know $\mathcal{R}$ and $$\mathcal{T}$$ in advance, we can use this result to define $$\phi$$ given $$\epsilon$$ and have a guarantee on our accuracy. Unfortunately, the bound scales linearly with the size of the state space $$|\mathcal{S}_G|$$ and has an extra $$(1-\gamma)$$ factor in the denominator, so the bound will probably be too loose to be useful in practice. The paper did not give any experimental evidence of how tight this bound was.
+for all $$s \in \mathcal{S}_G$$. Since we typically know $\mathcal{R}$ and $$\mathcal{T}$$ in advance, we can use this result to define $$\phi$$ given $$\epsilon$$ and have a guarantee on our accuracy. Unfortunately, the bound scales linearly with the size of the state space $$|\mathcal{S}_G|$$ and has an extra $$(1-\gamma)$$ factor in the denominator, so the bound will probably be too loose to be useful in practice. The paper did not give any experimental evidence of how tight this bound was.
 
 ## Experiments
 The experiments have the bizarre setup of choosing $$\phi$$ by first solving the MDP, then greedily aggregating ground states into abstract states that satisfied the criteria in equation (\ref{eq:phi_Q}). Aggregating using the criteria in equation (\ref{eq:phi_R_T}) would be a more reasonable test of how $$\phi$$ would be chosen in practice. The experiments show that under their setup, abstraction can be beneficial, significantly decreasing the computational burden while maintaining a good approximation to the optimal policy. The benchmark policy in the experiments was very weak: just a random policy.
