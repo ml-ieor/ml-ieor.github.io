@@ -34,7 +34,7 @@ Let a policy on the approximate MDP be denoted as $$\pi_A:\mathcal{S}_A\to \math
 The main result in this paper is stated in Lemma 1. It shows that if $\phi$ is defined to preserve the $$Q^{\pi^\ast}$$ function to within $$\epsilon>0$$ accuracy, i.e. 
 
 $$
-\phi(s)=\phi(s') \implies \forall_a |Q^{\pi^\ast}(s,a) - Q^{\pi^\ast}(s',a)|\leq \epsilon,
+\phi(s)=\phi(s') \Longrightarrow \forall_a |Q^{\pi^\ast}(s,a) - Q^{\pi^\ast}(s',a)|\leq \epsilon,
 $$
 
 then 
@@ -48,11 +48,11 @@ for all $$s\in\mathcal{S}_G$$. The theory behind this result is not particularly
 Practically the $$Q$$ function is unknown apriori and so the above result does not give a useful mechanism for defining $$\phi$$. A more practical corollary is provided in Lemma~2. It states that if $$\phi$$ preserves the rewards and transitions, i.e. 
 
 $$
-\phi(s_1)=\phi(s_2)\implies &\forall_a |\mathcal{R}(s_1,a)-cR(s_2,a)|\leq \epsilon ~~~~~\mbox{ and } \label{eq:phi_R_T}
+\phi(s_1)=\phi(s_2)\Longrightarrow &\forall_a \| \mathcal{R}(s_1,a)-cR(s_2,a) \| \leq \epsilon  \mbox{ and } 
 $$
 
 $$
-\forall_s |\sum_{s':\phi(s')=\phi(s)} \mathcal{T}(s_1,a,s')-\mathcal{T}(s_2,a,s')|\leq \epsilon,
+\qquad \forall_s |\sum_{s':\phi(s')=\phi(s)} \mathcal{T}(s_1,a,s')-\mathcal{T}(s_2,a,s')|\leq \epsilon,
 $$
 
 then
